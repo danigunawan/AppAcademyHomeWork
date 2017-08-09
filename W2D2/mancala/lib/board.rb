@@ -17,7 +17,7 @@ class Board
   end
 
   def valid_move?(start_pos)
-    raise "Invalid starting cup" unless [*(1..5),*(7..12)].include?(start_pos)
+    raise "Invalid starting cup" unless [*(0..5),*(7..12)].include?(start_pos)
   end
 
   def make_move(start_pos, current_player_name)
