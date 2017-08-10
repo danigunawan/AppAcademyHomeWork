@@ -7,7 +7,7 @@ Instructions: implement all of the pending specs (the `it` statements without bl
 
 describe Dessert do
   let(:chef) { double("chef") }
-  subject(:brownie) { Dessert.new("brownie", 60, chef)}
+  subject(:brownie) { Dessert.new("brownie", 60, chef) }
 
   describe "#initialize" do
     it "sets a type" do
@@ -66,7 +66,7 @@ describe Dessert do
 
   describe "#make_more" do
     it "calls bake on the dessert's chef with the dessert passed in" do
-      allow(chef).to receive(:bake).and_return(nil)
+      allow(chef).to receive(:bake).with(brownie).and_return(nil)
       expect(chef).to receive(:bake)
       brownie.make_more
     end
