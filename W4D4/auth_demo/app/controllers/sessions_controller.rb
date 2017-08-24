@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     )
 
     unless user.nil?
+      login!(user)
       redirect_to user_url(user)
     else
       render json: 'Credentials were wrong'

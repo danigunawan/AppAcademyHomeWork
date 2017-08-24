@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_current_user!, except: [:create, :new]
-  
+
   def new
     @user = User.new
   end
@@ -19,6 +19,11 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     render :index
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render :show
   end
 
   private

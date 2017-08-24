@@ -13,7 +13,7 @@
       <ul>
         <li>Logged in as: <%= current_user.username %></li>
         <li>
-          <form action="<%= session_url(session) %>" method="post">
+          <form action="<%= session_url(session[:session_id]) %>" method="post">
             <input
               type="hidden"
               name="authenticity_token"
