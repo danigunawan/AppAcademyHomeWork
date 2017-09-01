@@ -57,3 +57,17 @@ function dinerBreakfast() {
     console.log(order);
   };
 };
+
+function printNSkip3(n) {
+  var i = 0;
+
+  while(i < n) {
+    if(i % 3 === 0) {
+      i += 1;
+      continue;
+    }
+
+    console.log(i);
+    i += 1;
+  }
+}
