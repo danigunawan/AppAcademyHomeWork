@@ -23,6 +23,7 @@ class Calculator extends React.Component{
     e.preventDefault();
     let input1 = document.getElementById('num1');
     let val = input1.value;
+    // const num1 = e.target.value ? parseInt(e.target.value) : ""
     this.setState({num1: val});
     console.log(this);
     console.log(this.state.num1);
@@ -31,6 +32,7 @@ class Calculator extends React.Component{
   setNum2(e) {
     e.preventDefault();
     let val = document.getElementById('num2').value;
+    // const num2 = e.target.value ? parseInt(e.target.value) : ""
     this.setState({num2: val});
   }
 
@@ -65,14 +67,19 @@ class Calculator extends React.Component{
     this.setState({result: 0, num1: "", num2: ""});
   }
 
+  clickHandler(e) {
+    e.preventDefault();
+    console.log('clicked');
+  }
   render(){
     let {result, num1, num2 } = this.state;
     // why don't we pass the value of the input to the function directly here.
     return (
       <div>
+
         <h1>{result}</h1>
         <input id="num1"
-               onChange={this.setNum1.bind(this)}
+               onChange={ this.setNum1.bind(this) }
                type="number" value={num1}>
 
         </input>

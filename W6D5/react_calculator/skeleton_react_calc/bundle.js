@@ -9804,6 +9804,7 @@ var Calculator = function (_React$Component) {
       e.preventDefault();
       var input1 = document.getElementById('num1');
       var val = input1.value;
+      // const num1 = e.target.value ? parseInt(e.target.value) : ""
       this.setState({ num1: val });
       console.log(this);
       console.log(this.state.num1);
@@ -9813,6 +9814,7 @@ var Calculator = function (_React$Component) {
     value: function setNum2(e) {
       e.preventDefault();
       var val = document.getElementById('num2').value;
+      // const num2 = e.target.value ? parseInt(e.target.value) : ""
       this.setState({ num2: val });
     }
   }, {
@@ -9853,6 +9855,12 @@ var Calculator = function (_React$Component) {
       console.log('clear');
       e.preventDefault();
       this.setState({ result: 0, num1: "", num2: "" });
+    }
+  }, {
+    key: "clickHandler",
+    value: function clickHandler(e) {
+      e.preventDefault();
+      console.log('clicked');
     }
   }, {
     key: "render",
