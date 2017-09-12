@@ -11,7 +11,7 @@ class Widget extends React.Component {
     // require this component to re-render whenever the store's state changes
     this.props.store.subscribe(this.forceUpdate);
     this.currencies = ["USD", "EUR", "CAD", "JPY", "GBP", "CNY"];
-    this.selectCurrency = selectCurrency.bind(this);
+     this.selectCurrency = selectCurrency.bind(this);
   }
 
   fetchRates(currency) {
